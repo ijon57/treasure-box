@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 
     if @user.save
-      redirect_to @user
+      redirect_to root_url, notice: "User successfully created"
     else
       render :new
     end

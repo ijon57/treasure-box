@@ -9,11 +9,11 @@ describe "User management" do
     email = "user@mail.test"
     password = "secretpassword"
     post "/users", user: {email: email, password: password}
-    expect(response).to redirect_to(assigns(:user))
+    expect(response).to redirect_to(root_url)
     
     follow_redirect!
 
-    expect(response).to render_template(:show)
+    expect(response).to render_template(:index)
     expect(response.body).to include("User successfully created")
   end
 

@@ -10,12 +10,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-group :test do
-  gem 'rspec-rails'
-  gem 'factory_girl'
-end
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :development, :test do
+  gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'factory_girl'
 end
