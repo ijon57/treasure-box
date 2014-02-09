@@ -8,6 +8,7 @@ describe "User session" do
 
     email = "user@mail.test"
     password = "secretpassword"
+    user = FactoryGirl.create(:user, email: email, password: password)
     post "/sessions", email: email, password: password
     expect(response).to redirect_to(root_url)
     
@@ -23,6 +24,7 @@ describe "User session" do
     expect(response).to render_template(:new)
     post "/sessions"
     expect(response).to render_template(:new)
+    expect(response.body).to include("Invalid credentials")
   end
 
 end
