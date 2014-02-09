@@ -12,7 +12,7 @@ describe "Treasure management" do
     
     follow_redirect!
 
-    expect(response).to render_template(:index)
+    expect(response).to render_template(:show)
     expect(response.body).to include("Treasure: #{treasure_name}")
   end
 

@@ -1,8 +1,8 @@
 <h1>Create new account</h1>
 <ul>
-  <%= form_for :user do |f| %>
-    <li><%= label_tag :email, "Email" %><%= f.text_field :email %></li>
-    <li><%= label_tag :password, "Password" %><%= f.text_field :password %></li>
+  <%= form_for @user do |f| %>
+    <li><%= f.label :email, "Email" %><%= f.text_field :email %></li>
+    <li><%= f.label :password, "Password" %><%= f.text_field :password %></li>
     <li><%= f.submit "Sign up" %></li>
   <% end %>
 </ul>
