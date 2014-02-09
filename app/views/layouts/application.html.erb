@@ -8,19 +8,8 @@
 </head>
 <body>
 
-<div class="toolbar">
-  <% if current_user %>
-    Logged in as: <%= current_user.email %>
-  <% else %>
-    <%= link_to "Sign in", new_session_path %> |
-    <%= link_to "Sign up", new_user_path %>
-  <% end %>
-</div>
-
-<% if flash[:notice] || flash.now[:notice] %>
-  <div class="message notice"><%= flash[:notice].presence || flash.now[:notice] %></div>
-<% end %>
-
+<%= render 'layouts/toolbar' %>
+<%= render 'layouts/messages' %>
 
 <%= yield %>
 

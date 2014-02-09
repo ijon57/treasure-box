@@ -1,0 +1,5 @@
+<% if flash[:notice] || flash.now[:notice] %>
+  <div class="message notice">
+    <%= flash[:notice].presence || flash.now[:notice] %>
+  </div>
+<% end %>
