@@ -1,6 +1,6 @@
 Recent treasures:
 <% if current_user.treasures.any? %>
-  <%= render 'treasures/list', locals: {treasures: current_user.treasures.recent} %>
+  <%= render 'treasures/list', treasures: current_user.treasures.recent %>
 <% else %>
   <div>
     No treasures yet. <%= link_to "Go and create some", new_treasure_path %>

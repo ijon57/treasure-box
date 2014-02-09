@@ -1,5 +1,5 @@
 <ul>
   <% treasures.each do |treasure| %>
-    <li><%= treasure.name %></li>
+    <li><%= link_to treasure.name, treasures_path(treasure) %></li>
   <% end %>
 </ul>
