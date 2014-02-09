@@ -1,1 +1,6 @@
 <h1>Welcome to Treasure Box!</h1>
+
+<% if current_user %>
+  <div class="action-create"><%= link_to "Create new treasure", new_treasure_path %></div>
+  <div class="recent-treasures"><%= render "recent_treasures" %></div>
+<% end %>
