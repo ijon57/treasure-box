@@ -1,0 +1,7 @@
+<h1>Create new treasure</h1>
+<ul>
+  <%= form_for @treasure do |f| %>
+    <li><%= f.label :name, "Name" %><%= f.text_field :name %></li>
+    <li><%= f.submit %></li>
+  <% end %>
+</ul>
