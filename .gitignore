@@ -1,0 +1,7 @@
+log/*
+tmp/*
+log/*.log
+tmp/**/*
+.powrc
+Guardfile
+.rspec
